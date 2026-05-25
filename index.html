@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeHub 3D - Streaming Anime 3D Animations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🎨 AnimeHub 3D</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#player">Video</a></li>
+                <li><a href="#anime-list">Anime List</a></li>
+                <li><a href="#about">Tentang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Streaming Anime 3D Animation</h1>
+            <p>Nonton koleksi terbaik Takagi, Chii, Bunny Bars & Anya dalam kualitas HD</p>
+            <a href="#player" class="cta-btn">Mulai Nonton</a>
+        </div>
+    </section>
+
+    <!-- Video Player Section -->
+    <section id="player" class="player-section">
+        <div class="container">
+            <div class="player-wrapper">
+                <video id="videoPlayer" class="video-player" controls>
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-library/sample/BigBuckBunny.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung video player HTML5
+                </video>
+                <div class="player-controls">
+                    <button id="playBtn" class="control-btn play-btn" title="Play (Space)">▶️</button>
+                    <button id="pauseBtn" class="control-btn pause-btn" title="Pause (Space)">⏸️</button>
+                    <button id="fullscreenBtn" class="control-btn fullscreen-btn" title="Fullscreen (F)">🖥️</button>
+                </div>
+            </div>
+
+            <div class="video-info">
+                <h2 id="videoTitle">Takagi 3D Animation - Episode 1</h2>
+                <p id="videoDescription">Anime 3D berkualitas tinggi dari seri Takagi dengan animasi stunning dan karakter yang ekspresif.</p>
+                <div class="video-stats">
+                    <span class="stat">👁️ 2.5M Views</span>
+                    <span class="stat">👍 180K Likes</span>
+                    <span class="stat">💬 5K Komentar</span>
+                </div>
+                <div class="video-meta">
+                    <span class="meta-item">⏱️ 24 menit</span>
+                    <span class="meta-item">📺 1080p HD</span>
+                    <span class="meta-item">⭐ Rating: 4.8/5</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anime List Section -->
+    <section id="anime-list" class="anime-section">
+        <div class="container">
+            <h2>🎭 Series & Characters</h2>
+            <div class="anime-grid">
+                <!-- Takagi Series -->
+                <div class="anime-card takagi">
+                    <div class="anime-header">
+                        <h3>😊 Takagi</h3>
+                        <span class="badge">Popular</span>
+                    </div>
+                    <p>Karakter utama yang cerdas dan nakal. Dikenal dengan sifat pemainnya yang pandai menggoda Nishikata.</p>
+                    <div class="anime-videos">
+                        <button class="video-btn" onclick="playVideo(0)">Episode 1</button>
+                        <button class="video-btn" onclick="playVideo(1)">Episode 2</button>
+                        <button class="video-btn" onclick="playVideo(2)">Episode 3</button>
+                    </div>
+                </div>
+
+                <!-- Chii Character -->
+                <div class="anime-card chii">
+                    <div class="anime-header">
+                        <h3>🤖 Chii</h3>
+                        <span class="badge">Android</span>
+                    </div>
+                    <p>Karakter android cantik dari Chobits yang selalu ingin belajar dan berinteraksi dengan dunia.</p>
+                    <div class="anime-videos">
+                        <button class="video-btn" onclick="playVideo(3)">Episode 1</button>
+                        <button class="video-btn" onclick="playVideo(4)">Episode 2</button>
+                        <button class="video-btn" onclick="playVideo(5)">Episode 3</button>
+                    </div>
+                </div>
+
+                <!-- Bunny Bars -->
+                <div class="anime-card bunny">
+                    <div class="anime-header">
+                        <h3>🐰 Bunny Bars</h3>
+                        <span class="badge">Animation</span>
+                    </div>
+                    <p>Animasi 3D featuring karakter bunny yang lucu dengan grafis memukau dan efek visual menakjubkan.</p>
+                    <div class="anime-videos">
+                        <button class="video-btn" onclick="playVideo(6)">Part 1</button>
+                        <button class="video-btn" onclick="playVideo(7)">Part 2</button>
+                        <button class="video-btn" onclick="playVideo(8)">Part 3</button>
+                    </div>
+                </div>
+
+                <!-- Anya Character -->
+                <div class="anime-card anya">
+                    <div class="anime-header">
+                        <h3>🔮 Anya</h3>
+                        <span class="badge">Telepath</span>
+                    </div>
+                    <p>Karakter misterius dengan kemampuan telepatik dari Spy x Family. Cerdas, lucu, dan penuh kejutan.</p>
+                    <div class="anime-videos">
+                        <button class="video-btn" onclick="playVideo(9)">Episode 1</button>
+                        <button class="video-btn" onclick="playVideo(10)">Episode 2</button>
+                        <button class="video-btn" onclick="playVideo(11)">Episode 3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playlist Section -->
+    <section class="playlist-section">
+        <div class="container">
+            <h2>📋 Full Playlist (12 Videos)</h2>
+            <div class="playlist-grid">
+                <div class="playlist-item" onclick="playVideo(0)">
+                    <div class="playlist-thumbnail takagi-thumb">
+                        <span class="thumb-text">🎭</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Takagi Episode 1</h4>
+                    <p>24:00</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(1)">
+                    <div class="playlist-thumbnail takagi-thumb">
+                        <span class="thumb-text">🎭</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Takagi Episode 2</h4>
+                    <p>24:00</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(2)">
+                    <div class="playlist-thumbnail takagi-thumb">
+                        <span class="thumb-text">🎭</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Takagi Episode 3</h4>
+                    <p>24:00</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(3)">
+                    <div class="playlist-thumbnail chii-thumb">
+                        <span class="thumb-text">🤖</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Chii Episode 1</h4>
+                    <p>24:00</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(4)">
+                    <div class="playlist-thumbnail chii-thumb">
+                        <span class="thumb-text">🤖</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Chii Episode 2</h4>
+                    <p>24:00</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(5)">
+                    <div class="playlist-thumbnail chii-thumb">
+                        <span class="thumb-text">🤖</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Chii Episode 3</h4>
+                    <p>24:00</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(6)">
+                    <div class="playlist-thumbnail bunny-thumb">
+                        <span class="thumb-text">🐰</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Bunny Bars Part 1</h4>
+                    <p>12:30</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(7)">
+                    <div class="playlist-thumbnail bunny-thumb">
+                        <span class="thumb-text">🐰</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Bunny Bars Part 2</h4>
+                    <p>12:30</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(8)">
+                    <div class="playlist-thumbnail bunny-thumb">
+                        <span class="thumb-text">🐰</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Bunny Bars Part 3</h4>
+                    <p>12:30</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(9)">
+                    <div class="playlist-thumbnail anya-thumb">
+                        <span class="thumb-text">🔮</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Anya Episode 1</h4>
+                    <p>24:00</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(10)">
+                    <div class="playlist-thumbnail anya-thumb">
+                        <span class="thumb-text">🔮</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Anya Episode 2</h4>
+                    <p>24:00</p>
+                </div>
+                <div class="playlist-item" onclick="playVideo(11)">
+                    <div class="playlist-thumbnail anya-thumb">
+                        <span class="thumb-text">🔮</span>
+                        <div class="play-overlay">▶️</div>
+                    </div>
+                    <h4>Anya Episode 3</h4>
+                    <p>24:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>ℹ️ Tentang AnimeHub 3D</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>AnimeHub 3D adalah platform streaming khusus untuk anime 3D animation dengan kualitas terbaik. Kami menyediakan konten dari series populer seperti Takagi, Chii, Bunny Bars, dan Anya.</p>
+                    <p>Dengan teknologi player HTML5 terbaru dan interface yang user-friendly, Anda dapat menikmati anime favorit dengan pengalaman menonton yang luar biasa.</p>
+                    <h3>🎯 Fitur Utama:</h3>
+                    <ul>
+                        <li>✅ Video HD & 4K Quality</li>
+                        <li>✅ 12 Video Lengkap (4 Series)</li>
+                        <li>✅ Player dengan Full Controls</li>
+                        <li>✅ Responsive Design</li>
+                        <li>✅ Keyboard Shortcuts</li>
+                        <li>✅ Beautiful UI/UX</li>
+                    </ul>
+                    <h3>⌨️ Keyboard Shortcuts:</h3>
+                    <ul>
+                        <li><code>SPACE</code> - Play/Pause</li>
+                        <li><code>F</code> - Fullscreen</li>
+                        <li><code>← ��</code> - Rewind/Forward 5s</li>
+                        <li><code>↑ ↓</code> - Volume Control</li>
+                        <li><code>M</code> - Mute</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AnimeHub 3D - Premium Anime Streaming. All rights reserved.</p>
+            <p>Featuring: Takagi | Chii | Bunny Bars | Anya</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
